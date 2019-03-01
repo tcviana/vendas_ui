@@ -1,0 +1,59 @@
+<div class="card mt-3">
+    <div class="card-header">
+      <div class="float-left">
+        <h4>Produto</h4>
+      </div>
+      <div class="float-right">
+        <button type="button" class="btn btn-primary" [routerLink]="['formulario']">Novo Produto</button>
+        <button type="button" class="btn btn-secondary" (click)="onRefresh()" >Atualizar</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover" *ngIf="produtos$ | async as produtos; else loadingError" > 
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Produto</th>
+            <th>Valor</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of produtos" >
+            <td>{{ produto.id }}</td>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.valor }}</td>
+            <td>
+              <span class="float-right">
+                <button class="btn btn-outline-info mb-1 btn-sm" routerLink="/produtos/formulario/{{ produto.id }}"  >
+                  Editar
+                </button>
+                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="delete( produto.id )"  >
+                  Remover
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" style="text-align: right;">Total de Registros: {{ produtos.length }}</td>
+          </tr>
+        </tfoot>
+      </table>
+  
+      <ng-template #loadingError>
+        <div *ngIf="error$ | async; else loading" >
+          Erro ao carregar cursos. Tente novamente mais tarde.
+        </div>
+        <ng-template #loading>
+            <span>Carregando Cursos...</span>
+        </ng-template>
+      </ng-template>
+      
+    </div>
+    <div class="card-footer">
+
+    </div>
+  </div>
+  

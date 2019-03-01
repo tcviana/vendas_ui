@@ -1,0 +1,205 @@
+{
+  "pessoa": [
+    {
+      "id": 1,
+      "nome": "Severino Barbosa",
+      "cpf": "12345678910",
+      "endereco": "rua sem nome",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Cliente Dois",
+      "cpf": "78945612310",
+      "endereco": "Rua dos amigos",
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "nome": "Cliente Tres",
+      "cpf": "45698732110",
+      "endereco": "Rua dos compadres",
+      "ativo": true
+    },
+    {
+      "id": 4,
+      "nome": "Cliente Quatro",
+      "cpf": "32165498710",
+      "endereco": "Rua dos limões",
+      "ativo": false
+    },
+    {
+      "id": 5,
+      "nome": "Cliente Cinco",
+      "cpf": "32165498710",
+      "endereco": "Rua dos limões",
+      "ativo": false
+    },
+    {
+      "id": 6,
+      "nome": "Cliente Seis",
+      "cpf": "15975678910",
+      "endereco": "Rua dos parças",
+      "ativo": false
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 234,
+      "nome": "Sebastião José",
+      "cpf": "12345678910",
+      "endereco": "Rua João Gusmão sn",
+      "ativo": true
+    },
+    {
+      "id": 5346,
+      "nome": "Johnson",
+      "cpf": "78945612310",
+      "endereco": "Rua João Gusmão sn",
+      "ativo": true
+    },
+    {
+      "id": 5347,
+      "nome": "asdf",
+      "cpf": "12345678910",
+      "endereco": "asdf",
+      "ativo": true
+    },
+    {
+      "id": 5348,
+      "nome": "fsadfasdfas",
+      "cpf": "353.428.298-10",
+      "endereco": "asdfasdfasdf",
+      "ativo": true
+    },
+    {
+      "id": 5349,
+      "nome": "afsdfasdfa",
+      "cpf": "2342342342",
+      "endereco": "safdfasdfas",
+      "ativo": true
+    },
+    {
+      "id": 5350,
+      "nome": "asdf",
+      "cpf": "asdf",
+      "endereco": "asdf",
+      "ativo": true
+    },
+    {
+      "id": 5351,
+      "nome": null,
+      "cpf": null,
+      "endereco": null,
+      "ativo": null
+    },
+    {
+      "id": 5352,
+      "nome": null,
+      "cpf": null,
+      "endereco": null,
+      "ativo": null
+    },
+    {
+      "id": 5353,
+      "nome": null,
+      "cpf": null,
+      "endereco": null,
+      "ativo": null
+    },
+    {
+      "id": 5354,
+      "nome": null,
+      "cpf": null,
+      "endereco": null,
+      "ativo": null
+    },
+    {
+      "id": 5355,
+      "nome": "sd",
+      "cpf": null,
+      "endereco": null,
+      "ativo": true
+    },
+    {
+      "id": 5356,
+      "nome": "",
+      "cpf": null,
+      "endereco": null,
+      "ativo": true
+    },
+    {
+      "id": 5357,
+      "nome": "dfasdfasd",
+      "cpf": "423423423423",
+      "endereco": "sadfasdfa",
+      "ativo": true
+    },
+    {
+      "id": 5358,
+      "nome": null,
+      "cpf": null,
+      "endereco": null,
+      "ativo": true
+    }
+  ],
+  "produto": [
+    {
+      "id": 1,
+      "nome": "sabonete",
+      "valor": 2.14
+    },
+    {
+      "id": 2,
+      "nome": "Johnson",
+      "valor": 9.99
+    }
+  ],
+  "pedido":
+  [
+    {
+      "id": 1,
+      "pedidoItens": [
+        {
+          "id": 1,
+          "produto": {
+            "id": 1,
+            "nome": "Herbalyfe",
+            "valor": 49.9
+          },
+          "quantidade": 2
+        },
+        {
+          "id": 2,
+          "produto": {
+            "id": 2,
+            "nome": "Johnson",
+            "valor": 15.9
+          },
+          "quantidade": 1
+        },
+        {
+          "id": 3,
+          "produto": {
+            "id": 3,
+            "nome": "Tapete de croche",
+            "valor": 6.9
+          },
+          "quantidade": 3
+        }
+      ],
+      "pessoa": {
+        "id": 1,
+        "nome": "Sebastião José",
+        "ativo": false,
+        "endereco": "Rua desconhecida",
+        "cpf": "45678912310"
+      },
+      "dataAbertura": null
+    }
+  ]
+}

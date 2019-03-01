@@ -1,0 +1,64 @@
+<div class="card mt-3">
+  <div class="card-header">
+    <div class="float-left">
+      <h3>Pedidos</h3>
+    </div>
+    <div class="float-right">
+      <button type="button" class="btn btn-primary" routerLink="formulario">Novo Pedido</button>
+      <button type="button" class="btn btn-secondary" (click)="onRefresh()" >Atualizar</button>
+    </div>
+  </div>
+  <div class="card-body">
+      <table class="table table-hover" *ngIf="pedidos$ | async as pedidos; else loadingError">
+          
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Cliente</th>
+              <th>Data</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let pedido of pedidos">
+              <td>{{ pedido.id }}</td>
+              <td>{{ pedido.pessoa.nome }}</td>
+              <td>
+                <span class="float-right">
+                  <button class="btn btn-outline-info mb-1 btn-sm" routerLink="formulario/{{ pedido.id }}">
+                    Editar
+                  </button>
+    
+                  <button class="btn btn-outline-danger mb-1 btn-sm" (click)="delete(pedido.id)">
+                    Remover
+                  </button>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" style="text-align:right;">
+                Total de Registros: {{pedidos.length}}
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+    
+    
+        <ng-template #loadingError>
+          <div *ngIf="error$ | async; else loading">
+            Erro ao carregar. Tente novamente mais tarde.
+          </div>
+    
+          <ng-template #loading>
+            <span>Carregando Pedidos...</span>
+          </ng-template>
+    
+        </ng-template>
+    
+  </div>
+  <div class="card-footer">
+
+  </div>
+</div>
