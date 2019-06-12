@@ -1,8 +1,8 @@
-import { Produto } from '../../../../app-site/src/app/services/produto';
+import { Produto } from './produto';
 
-export interface PedidoItens{
+export interface PedidoItens {
 
-    id:number,
-    quantidade:number,
-    produto:Produto
+    id: number,
+    quantidade: number,
+    produto: Produto
 }
